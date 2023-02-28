@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let color1 = prompt("ingrese el primer color entre estos 3 colores rojo-amarillo-azul : ")
+        let color2 = prompt("ingrese el primer color entre estos 3 colores rojo-amarillo-azul : ")
+
+        if (color1 == "rojo" && color2 == "amarillo" || color2 == "rojo"  && color1 == "amarillo"){
+            document.write("la combinación de los colores que realizo es  de color : NARANJA")
+        } else {
+            if (color1 == "azul" && color2 == "rojo" || color2 == "azul"  && color1 == "rojo"){
+                document.write("la combinación de los colores que realizo es  de color : VIOLETA")
+        } else {
+            if (color1 == "amarillo" && color2 == "azul" || color2 == "amarillo"  && color1 == "azul"){
+                document.write("la combinación de los colores que realizo es  de color : VERDE")
+        }
+    }
+}
+
+    </script>
+</body>
+</html>
