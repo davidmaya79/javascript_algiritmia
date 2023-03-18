@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Ingrese la cantidad de numeros  :"))
+        let mayor = 0
+
+        for (let i = 1;i <= n;i++){
+            let numeros = parseInt(prompt("Ingrese los valores :"))
+            if (numeros >= 1000){
+                mayor++
+            }
+        }
+        document.write("la cantidad de valores mayores o iguales a  1000 son :"+ mayor)
+    </script>
+</body>
+</html>

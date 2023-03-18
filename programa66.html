@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cantidad = parseInt(prompt("Ingrese la cantidad de puntos  a procesar :"))
+        let primero = 0
+        let segundo = 0
+        let tercerero = 0
+        let cuarto = 0
+        let origen = 0
+
+
+        for (let i = 1;i <= cantidad;i++){
+        let x = parseInt(prompt("Ingrese la cordenada x :"))
+        let y = parseInt(prompt("Ingrese la cordenada y :"))
+
+        if (x > 0 && y > 0){
+            primero++
+        } else {
+            if (x < 0 && y > 0){
+                segundo++
+            } else {
+                if (x < 0 && y < 0){
+                    tercerero++
+                } else {
+                    if (x > 0 && y < 0){
+                        cuarto++
+                    } else {
+                         origen++
+                    }
+                }
+            }
+        } 
+}
+        document.write("Se han encontrados  "+ primero + " puntos en el cuadrante uno ")
+        document.write("<br>")
+        document.write("Se han encontrados "+ segundo + " puntos en el cuadrante dos ")
+        document.write("<br>")
+        document.write("Se han encontrados "+ tercerero + " puntos en el cuadrante tres ")
+        document.write("<br>")
+        document.write("Se han encontrados "+ cuarto + " puntos en el cuadrante cuarto ")
+        document.write("<br>")
+        document.write("Se han encontrados "+ origen + " puntos en el cuadrante de origen ")
+        document.write("<br>")
+    </script>
+</body>
+</html>
