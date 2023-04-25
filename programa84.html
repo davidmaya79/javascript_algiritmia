@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let turnodia = []
+         
+        let sumadia = 0
+         
+        let sumatotal = 0
+        for (let i = 1;i <=3;i++){
+            let sueldodia = parseInt(prompt("Ingre el sueldo de los trabajadores del turno dia: "))
+            turnodia.push(sueldodia)
+            sumadia =  sumadia + sueldodia
+        }
+        let turnotarde = []
+        let sumatarde = 0
+        for (let i = 1;i <=5;i++){
+            let sueldotarde = parseInt(prompt("Ingre el sueldo de los trabajadores del turnp tarde : "))
+            turnotarde.push(sueldotarde)
+            sumatarde =  sumatarde + sueldotarde
+             
+        }
+        for (let f = 0;f <= turnodia.length ;f++){
+        document.write(turnodia[f]+"<br>")
+        }
+        document.write( "<hr>")
+        for (let f = 0;f <= turnotarde.length ;f++){
+        document.write(turnotarde[f]+"<br>")
+        }
+        sumatotal = sumadia + sumatarde  
+        document.write(sumatotal +"<br>")
+        
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arreglo1 = []
+
+        for (let i = 0;i < 6;i++){
+            let elemento = parseInt(prompt("ingrese 6 elementos :"))
+            arreglo1.push(elemento)
+        }
+
+        for (let i = 0;i < arreglo1.length;i++){
+             document.write(arreglo1[i]+" - ")
+        }
+        document.write("<br>")
+
+        let ordenado = true
+        for (let i = 0;i < arreglo1.length-1;i++){
+            if (arreglo1[i] > arreglo1[i + 1]){
+                ordenado = false
+                break //finaliza la estructura repetitiva que la contiene
+            }
+        }
+        if (ordenado){
+            document.write("el arreglo esta ordenado")
+        } else {
+            document.write("el arreglo no esta ordenado")
+        }
+        </script>
+</body>
+</html>

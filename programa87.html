@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cursoa = [1,4,7,5,6]
+        let cursob = [1,6,3,2,1,3,4,7]
+        let sumaa = 0
+        let promedioa = 0
+        let sumab = 0
+        let promediob = 0
+
+        for (let i = 0;i < cursoa.length;i++){
+            sumaa = sumaa + cursoa[i]
+            promedioa = sumaa / cursoa.length
+        }
+
+        for (let i = 0;i < cursob.length;i++){
+            sumab = sumab + cursob[i]
+            promediob = sumab / cursob.length
+        }
+        if (promedioa > promediob){
+            document.write("el curso que obtuvo el promedio mayor es el curso A "+ "<br>" )
+        } else {
+            if (promediob > promedioa){
+                document.write("el curso que obtuvo el promedio mayor es el curso B " + "<br>")
+            } else {
+                document.write(" los 2 cursos tienen el promedio  iguales " + "<br>")
+            }
+        }
+
+        document.write(sumaa + "<br>")
+        document.write("promedio curso A " + promedioa + "<br>" )
+        document.write(sumab + "<br>")
+        document.write("promedio curso B " +promediob)
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = []
+        let cantidad = parseInt(prompt("Ingresa la cantidad de sueldos a ingresar :"))
+        for(let i = 1;i <= cantidad;i++){
+            let sueldos = parseInt(prompt("Ingrese la cantidad de sueldos :"))
+            array.push(sueldos)
+        }
+        let suma = 0
+        for(let i = 0;i < array.length;i++){
+            document.write(array[i] + " - ")
+            suma = suma + array[i]
+             
+        }
+        document.write("<br>")
+        document.write("la suma de todos los elementos es :" + suma)
+        document.write("<br>")
+        let promedio = suma / array.length
+        document.write("el promedio de los sueldos es :" + promedio)
+    </script>
+</body>
+</html>
