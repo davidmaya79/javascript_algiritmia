@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // Definimos un arreglo "sueldos" que contiene algunos números enteros.
+let sueldos = [1200, 750, 820, 550, 490];
+
+// Iniciamos un ciclo "for" que se ejecutará "n-1" veces, donde "n" es el tamaño del arreglo "sueldos".
+for (let k = 0; k < sueldos.length - 1; k++) {
+    // Iniciamos otro ciclo "for" que recorre todos los elementos del arreglo "sueldos" hasta el elemento "n-1-k",
+    // donde "n" es el tamaño del arreglo y "k" es el número de iteraciones del ciclo externo.
+    for (let i = 0; i < sueldos.length - 1 - k; i++) {
+        // En cada iteración, comparamos el elemento actual con el siguiente elemento.
+        // Si el elemento actual es mayor que el siguiente, los intercambiamos para que queden en orden ascendente.
+        if (sueldos[i] > sueldos[i + 1]) {
+            let aux = sueldos[i]; // Guardamos el valor del elemento actual en una variable auxiliar.
+            sueldos[i] = sueldos[i + 1]; // Reemplazamos el valor del elemento actual con el valor del siguiente elemento.
+            sueldos[i + 1] = aux; // Reemplazamos el valor del siguiente elemento con el valor guardado en la variable auxiliar.
+        }
+    }
+}
+
+// Finalmente, imprimimos los elementos del arreglo "sueldos", que deberían estar ordenados en orden ascendente.
+for (let i = 0; i < sueldos.length; i++) {
+    document.write(sueldos[i] + " - "); // Imprimimos cada elemento del arreglo, separados por un guion.
+}
+
+    </script>
+</body>
+</html>
+
+<!-- En resumen, este código también implementa el algoritmo de ordenamiento "burbuja" para ordenar un arreglo de números enteros en orden ascendente. La diferencia con el código anterior es que, en este caso, se utiliza la longitud del arreglo para definir los límites de los ciclos. En el ciclo externo, la cantidad de iteraciones es "n-1", y en el ciclo interno, la cantidad de iteraciones es "n-1-k", donde "k" es el número de iteraciones del ciclo externo. Esta optimización hace que el algoritmo sea más eficiente, ya que elimina las iteraciones innecesarias en el caso de que el arreglo ya esté ordenado antes de que se completen todas las iteraciones. -->
+<!-- La razón por la que se resta 1 de la longitud del array en la condición del bucle externo es para evitar iteraciones innecesarias.
+
+En un algoritmo de ordenamiento de burbuja, el bucle interno intercambia elementos adyacentes que están desordenados hasta que el array esté ordenado. Para un array de longitud n, el algoritmo realizará n-1 pasadas a través del array porque después de n-1 pasadas, el elemento más grande estará en su posición correcta.
+
+Por lo tanto, en el bucle externo, solo necesitamos iterar n-1 veces. Si iteramos n veces, el bucle interno intentará comparar el último elemento con un elemento que no existe, lo que causaría un error. Por lo tanto, restamos 1 de la longitud del array en la condición del bucle externo para evitar esto. -->
+
+<!-- En el bucle interno, también restamos 1 de la longitud del array, pero en este caso, también le restamos el número de pasadas que ya hemos realizado en el bucle externo.
+
+La razón de esto es que después de cada pasada en el bucle externo, el elemento más grande se coloca al final del array, por lo que no necesitamos comparar ese elemento en el bucle interno.
+
+Por ejemplo, en la primera pasada del bucle externo, necesitamos comparar los elementos de la posición 0 a la posición 3 del array. Después de eso, el elemento más grande (1200) está en la última posición, por lo que en la segunda pasada, solo necesitamos comparar los elementos de la posición 0 a la posición 2, y así sucesivamente.
+
+Por lo tanto, en la condición del bucle interno, restamos la cantidad de pasadas realizadas en el bucle externo (k) de la longitud del array, lo que nos da el rango de elementos que necesitamos comparar en esa pasada. -->

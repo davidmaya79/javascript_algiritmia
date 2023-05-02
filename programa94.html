@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         
+        // Definimos una variable "nombres" que contiene un arreglo con algunos nombres.
+let nombres = ["juan","carlos","ana","marcos","maria"];
+
+// Definimos una variable "menor" que contiene el primer nombre en el arreglo "nombres".
+let menor = nombres[0];
+
+// Iniciamos un ciclo "for" que recorrerá todos los elementos del arreglo "nombres",
+// comenzando en la posición 1 (ya que la posición 0 ya está almacenada en la variable "menor").
+for(let i = 1; i < nombres.length; i++){
+    // En cada iteración, comparamos el nombre actual (en la posición "i") con el nombre más pequeño hasta el momento.
+    // Si el nombre actual es menor al nombre más pequeño, lo almacenamos en la variable "menor".
+    if(nombres[i] < menor){
+        menor = nombres[i];
+    }
+}
+
+// Finalmente, imprimimos el nombre más pequeño en el arreglo "nombres".
+document.write("El nombre menor alfabeticamente es: " + menor);
+
+         
+         
+    </script>
+</body>
+</html>

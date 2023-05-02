@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Se inicializa un arreglo vacío
+let arreglo = []
+
+// Se solicita al usuario la cantidad de valores que desea ingresar al arreglo
+let cantidad = parseInt(prompt("Cuantos valores ingresara :"))
+
+// Se utiliza un ciclo for para pedir al usuario que ingrese los valores y almacenarlos en el arreglo
+for (let i = 0; i < cantidad; i++) {
+    let valores = parseInt(prompt("Ingrese los valores :")) // Se pide al usuario que ingrese un valor
+    arreglo.push(valores) // Se agrega el valor ingresado al arreglo
+}
+
+// Se inicializa la variable 'menor' con el primer valor del arreglo
+let menor = arreglo[0]
+
+// Se utiliza un ciclo for para encontrar el valor más pequeño en el arreglo
+for (let i = 1; i < arreglo.length; i++) {
+    if (arreglo[i] < menor) { // Si el valor actual del arreglo es menor que el valor de 'menor'
+        menor = arreglo[i] // Se actualiza el valor de 'menor'
+    } 
+}
+
+// Se inicializa la variable 'repetidos' en 0
+let repetidos = 0
+
+// Se utiliza otro ciclo for para contar cuántas veces se repite el valor más pequeño en el arreglo
+for (let i = 0; i < arreglo.length; i++) {
+    if (menor == arreglo[i]) { // Si el valor actual del arreglo es igual al valor de 'menor'
+        repetidos++ // Se incrementa la variable 'repetidos' en 1
+    }
+}
+
+// Se imprime en el documento HTML si el valor más pequeño se repite o no
+if (repetidos > 1) { // Si el valor de 'repetidos' es mayor que 1
+    document.write("El elemento menor se encuentra repetido" ) // Se imprime que el valor más pequeño se repite
+} else { // De lo contrario
+    document.write("El elemento no se encuentra repetido ") // Se imprime que el valor más pequeño no se repite
+}
+
+     
+         
+         
+
+    </script>
+</body>
+</html>

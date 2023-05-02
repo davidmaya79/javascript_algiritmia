@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arreglo = [100, 400, 50, 1200, 80, 120]; // crea un array con seis elementos
+
+let mayor = arreglo[0]; // asigna el primer elemento del array a la variable mayor
+let posicion = 0; // inicializa la variable posicion con cero
+
+for (let f = 1; f < arreglo.length; f++) { // itera sobre los elementos del array, comenzando en el segundo elemento
+  if (arreglo[f] > mayor) { // compara cada elemento con el valor actual de mayor
+    mayor = arreglo[f]; // si el elemento es mayor que mayor, actualiza mayor con el valor del elemento
+    posicion = f; // asigna el índice del elemento actual a la variable posición
+  }
+}
+
+document.write("El elemento mayor del arreglo es " + mayor + "<br>"); // muestra en pantalla el valor del mayor
+document.write("se encuentra en la posicion " + posicion); // muestra en pantalla la posición del mayor
+    </script>
+</body>
+</html>
+
+<!-- Lo que hace este código es encontrar el valor mayor dentro del array arreglo y su posición dentro del mismo. Para ello, se utiliza una variable llamada mayor que se inicializa con el primer elemento del array, y una variable llamada posicion que se inicializa con cero.
+
+Luego, se recorre el array utilizando un bucle for. El bucle comienza en el segundo elemento del array (con índice 1) y se detiene cuando se alcanza el final del array (con índice arreglo.length). Dentro del bucle, se compara cada elemento con el valor actual de mayor. Si el elemento es mayor que mayor, se actualiza el valor de mayor con el valor del elemento, y se actualiza la variable posicion con el índice del elemento actual.
+
+Una vez que se ha recorrido todo el array, se muestra en pantalla el valor de mayor junto con un mensaje que indica que es el elemento mayor del arreglo, y la posición del mayor. La función document.write() se utiliza para imprimir estos mensajes en pantalla. -->

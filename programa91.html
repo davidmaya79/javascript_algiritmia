@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let arraynombres = [] // crea un arreglo vacío para almacenar los nombres de los empleados
+let arraysueldos = [] // crea un arreglo vacío para almacenar los sueldos de los empleados
+
+// pide al usuario que ingrese el nombre y el sueldo de cuatro empleados y los almacena en los arreglos correspondientes
+for (let i = 0; i < 4; i++) {
+  let nombres = prompt("Ingrese el nombre del empleado:")
+  arraynombres.push(nombres) // agrega el nombre ingresado al arreglo arraynombres
+  let sueldos = parseFloat(prompt("Ingrese el sueldo del empleado:"))
+  arraysueldos.push(sueldos) // agrega el sueldo ingresado al arreglo arraysueldos
+}
+
+let mensaje = prompt("Ingrese el nombre del empleado si está en nuestra base de datos:") // solicita al usuario que ingrese el nombre de un empleado
+let existe = false // inicializa la variable existe como falso
+
+// busca el nombre ingresado en el arreglo arraynombres
+for (let f = 0; f < arraynombres.length; f++) {
+  if (mensaje == arraynombres[f]) { // si el nombre se encuentra en la base de datos
+    document.write("El empleado " + mensaje + " tiene un sueldo de " + arraysueldos[f] + "<br>") // muestra el nombre y el sueldo correspondiente en pantalla
+    existe = true // cambia la variable existe a verdadero
+    break // sale del bucle for
+  }
+}
+
+// si el nombre ingresado no se encuentra en la base de datos
+if (existe == false) {
+  document.write("No existe un empleado con dicho nombre.") // muestra un mensaje de error en pantalla
+}
+
+    </script>
+</body>
+</html>
